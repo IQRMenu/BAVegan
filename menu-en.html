@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta id="ogTitle" property="og:title" content="">
+    <meta id="ogDescription" property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <link id="headIcon" rel="icon" href="./img/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__links">
+            <a href="./menu-ru.html">RU</a>
+            <hr>
+            <a href="./menu-es.html">ES</a>
+        </div>
+        <div class="nav__buttons">
+            <button id="buttonCartOpenClouse" class="cart">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="span-number" id="cartLengthNumber"></span>
+                <span class="span-number span-number_order" id="orderLengthNumberInNav"></span>
+            </button>
+            <button id="buttonCartClouse" class="cart-clouse"><i class="fa-solid fa-circle-left"></i></button>
+        </div>
+    </nav>
+
+    <div class="loader" id="loader">
+        <svg width="100" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" stroke=var(--color3) stroke-width="4" fill="none" stroke-linecap="round"
+                stroke-dasharray="100" stroke-dashoffset="75">
+                <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s"
+                    repeatCount="indefinite" />
+            </circle>
+        </svg>
+        <p id="loaderText"></p>
+    </div>
+
+    <div id="categoryListDiv" class="category-list"></div>
+    <div id="menuListDiv" class="menu-list"></div>
+
+    <div class="cart-box" id="cartBoxDiv">
+        <div class="order-box" id="orderBoxDiv">
+            <p class="order-box__head">
+                <button id="historyOrdersButtonInOrderHead">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span class="span-number" id="historyOdresLengthNumber2"></span>
+                </button>
+                <span id="orderBoxTotalCostText"></span>
+                <span id="orderBoxTotalCostNumber"></span>
+            </p>
+            <div class="order-box__buttons">
+                <button id="buttonShowOrderList">
+                    <span class="span-number" id="orderLengthNumber"></span>
+                </button>
+                <button id="buttonPayOrder"></button>
+            </div>
+
+        </div>
+        <div class="cart-list-container">
+            <p class="cart-list-container__head">
+                <span id="cartListTotalCostText"></span>
+                <span id="cartListTotalCostNumber"></span>
+            </p>
+            <div id="cartListDiv" class="cart-list"></div>
+            <button id="buttonSendOrder"></button>
+        </div>
+    </div>
+
+    <div class="order-check" id="orderCheck">
+        <button id="orderCheckClouseButton"><i class="fa-solid fa-xmark"></i></button>
+        <button id="orderCheckHistoryOrdersButton">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span id="ordersHistoryButtonText"></span>
+            <span class="span-number" id="historyOrderLengthNumber"></span>
+        </button>
+        <h2 id="orderCheckTitleText"></h2>
+        <div class="order-list" id="orderListDiv"></div>
+        <button id="buttonPayOrderInCheck">
+            <span id="orderCheckTotalCostText"></span>
+            <span id="orderCheckTotalCostNumber"></span>
+        </button>
+    </div>
+
+    <div id="ordersHistoryBox" class="orders-box">
+        <button id="ordersBoxClouseButton"><i class="fa-solid fa-xmark"></i></button>
+        <h2 id="orderHistoryTitleText"></h2>
+        <div id="ordersHistoryListDiv" class="odrers-box__list"></div>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+        <div class="dialog-box" id="dialogBoxDiv"></div>
+    </div>
+
+
+
+
+</body>
+
+</html>
